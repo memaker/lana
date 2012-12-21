@@ -1,0 +1,14 @@
+# Twitter configuration
+# More info on how to register the application at http://dev.twitter.com
+
+consumer_key:    your_key_here
+consumer_secret: your_key_here
+oauth_token:        your_key_here
+oauth_token_secret: your_key_here
+
+
+# Mongo configuration
+
+host:     localhost
+port:     27017
+database: zara01_twitter
