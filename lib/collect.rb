@@ -5,20 +5,21 @@ Bundler.require
 # libs
 require_relative 'tweet_miner'
 
+puts "The client is : #{ARGV[0]}"
+
 # config
-twitter_settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + './../config/twitter.yml')
-mongo_settings   = YAML.load_file File.expand_path(File.dirname(__FILE__) + './../config/mongodb.yml')
+settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + "./../config/#{ARGV[0]}.yml")
 
 # tweetstream
 TweetStream.configure do |config|
-  config.consumer_key       = twitter_settings['consumer_key']
-  config.consumer_secret    = twitter_settings['consumer_secret']
-  config.oauth_token        = twitter_settings['oauth_token']
-  config.oauth_token_secret = twitter_settings['oauth_token_secret']
+  config.consumer_key       = settings['consumer_key']
+  config.consumer_secret    = settings['consumer_secret']
+  config.oauth_token        = settings['oauth_token']
+  config.oauth_token_secret = settings['oauth_token_secret']
 end
 
 # miner
-miner = TweetMiner.new(mongo_settings)
+miner = TweetMiner.new(settings)
 
 # stream
 stream = TweetStream::Client.new
