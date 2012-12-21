@@ -7,8 +7,11 @@ Collect and analyze the tweets. Idea and code from Greg Moreno
 
 ```
   # adjust settings in config/*.yml
-  ruby lib/collect.rb   # leave this running to collect tweets to mongodb
+  ruby lib/collect.rb example   # where example is the instance id. Leave this running to collect tweets to mongodb
   ruby lib/counter.rb   # show stats for user tweet counts
   ruby lib/mentions.rb  # show stats for user tweet mentions in graph.dot
+  
+  # start using
+  kkruby lib/collect.rb zara01
 
   neato -Tpng graph.dot -o mentions.png  # convert dot to png file

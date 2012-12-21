@@ -6,7 +6,8 @@ Bundler.require
 require_relative 'tweet_miner'
 
 # config
-mongo_settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + './../config/mongodb.yml')
+# settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + "./../config/#{ARGV[0]}.yml")
+settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + "./../config/#{ARGV[0]}.yml")
 
 # miner
 miner = TweetMiner.new(mongo_settings)
