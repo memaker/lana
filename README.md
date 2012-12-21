@@ -1,9 +1,9 @@
 Lana Project
 ============
 
-Collect and analyze the tweets. Idea and code from [Greg Moreno]
-(http://gregmoreno.wordpress.com/2012/09/05/mining-twitter-data-with-ruby-mongodb-and-map-reduce/) [Part 1]
-(http://gregmoreno.wordpress.com/2012/09/20/mining-twitter-data-with-ruby-visualizing-user-mentions/) [Part 2]
+Collect and analyze the tweets. Idea and code from Greg Moreno
+[Part 1] (http://gregmoreno.wordpress.com/2012/09/05/mining-twitter-data-with-ruby-mongodb-and-map-reduce/) 
+[Part 2] (http://gregmoreno.wordpress.com/2012/09/20/mining-twitter-data-with-ruby-visualizing-user-mentions/)
 
 ```
   # adjust settings in config/*.yml
