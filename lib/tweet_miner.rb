@@ -18,7 +18,8 @@ class TweetMiner
   end
 
   def statuses
-    @statuses ||= db['statuses']
+    # @statuses ||= db['statuses']
+    @statuses ||= db['tweets']
   end
 
   def insert_status(status)
@@ -29,5 +30,6 @@ class TweetMiner
   private
   def connect_to_db
     @db_connector ||= Mongo::Connection.new(options['host'], options['port']).db(options['database'])
+    # @db_connector ||= Mongo::Connection.from_uri('mongodb://twitteruser:demopass@ds039467.mongolab.com:39467').db('twitter')
   end
 end

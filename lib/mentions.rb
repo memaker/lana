@@ -6,10 +6,10 @@ Bundler.require
 require_relative 'tweet_miner'
 
 # config
-mongo_settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + './../config/mongodb.yml')
+settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + "./../config/#{ARGV[0]}.yml")
 
 # miner
-miner = TweetMiner.new(mongo_settings)
+miner = TweetMiner.new(settings)
 
 # rgl lib
 require "rgl/adjacency"
@@ -28,7 +28,7 @@ graph.write_to_graphic_file
 
 # run neato to convert to png
 # `brew install graphviz`
-`neato -Tpng graph.dot -o mentions.png`
+#`neato -Tpng graph.dot -o mentions.png`
 
 # en nuestro caso
-# dot -Tpng input.dot > output.png
+#`dot -Tpng graph.dot > output.png`

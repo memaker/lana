@@ -6,11 +6,10 @@ Bundler.require
 require_relative 'tweet_miner'
 
 # config
-# settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + "./../config/#{ARGV[0]}.yml")
 settings = YAML.load_file File.expand_path(File.dirname(__FILE__) + "./../config/#{ARGV[0]}.yml")
 
 # miner
-miner = TweetMiner.new(mongo_settings)
+miner = TweetMiner.new(settings)
 
 puts 'Status count by user'
 results = miner.status_count_by_user 
