@@ -12,6 +12,9 @@ Collect and analyze the tweets. Idea and code from Greg Moreno
   ruby lib/mentions.rb  # show stats for user tweet mentions in graph.dot
   
   # start using
-  kkruby lib/collect.rb zara01
+  ruby lib/collect.rb zara01
+  
+  # to MongoLab
+  ruby lib/collect_mongolab.rb zara01_mongolab
 
   neato -Tpng graph.dot -o mentions.png  # convert dot to png file

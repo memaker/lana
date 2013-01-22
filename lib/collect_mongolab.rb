@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require
 
 # libs
-require_relative 'tweet_miner'
+require_relative 'tweet_miner_mongolab'
 
 puts "The client is : #{ARGV[0]}"
 
