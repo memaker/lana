@@ -19,7 +19,7 @@ class TweetMiner
 
   def statuses
     # @statuses ||= db['statuses']
-    @statuses ||= db['tweets']
+    @statuses ||= db['tweet']
   end
 
   def insert_status(status)
